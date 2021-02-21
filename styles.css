@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+
+html,body{
+    height: 100%;
+}
+
+
+.app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .set-window{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex; align-items: center;
+    justify-content: center;
+}
+
+.set-window form{
+    width: 500px;
+    padding: 20px;
+    background-color:#d1d1d1;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.set-window form select{
+    width: 80%;
+    height: 44px;
+    padding-left: 20px;
+    border: 0;
+    border-bottom: 2px solid #541775;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    color: #541775;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.set-window form input{
+    width: 80%;
+    height: 44px;
+    border:0;
+    border-radius: 15px;
+    background-color: #7a2ea3;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.app .game-content{
+    width: 80%;
+    max-width: 700px;
+    padding: 40px 0;
+    border-radius: 20px;
+    background-color: #d1d1d1;
+    box-shadow: 5px 5px 5px #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.game-content .game-display{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.game-display h1{
+    font-size: 30px;
+    font-weight: 400;
+    color: #9b3fcc;
+}
+
+.game-display p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #9b3fcc;
+}
+
+.game-content .game-board{
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 2px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.game-board .cell{
+    width: 100%;
+    background-color: #c29fe0;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: #d41c62;
+    font-weight: bold;
+}
+
+.game-board .cell:hover{
+    background-color: #cdb6e0;
+}
+
+#reset{
+    display: none;
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    background-color: #7a2ea3;
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}   
+
