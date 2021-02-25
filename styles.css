@@ -31,7 +31,7 @@ html,body{
 .set-window form{
     width: 500px;
     padding: 20px;
-    background-color:#d1d1d1;
+    background-color:#cfc1de;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -56,22 +56,27 @@ html,body{
 .set-window form input{
     width: 80%;
     height: 44px;
-    border:0;
+    border: 2px solid #7a2ea3;
     border-radius: 15px;
-    background-color: #7a2ea3;
+    background-color: transparent;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: #7a2ea3;
     cursor: pointer;
     outline: none;
+    transition: .3s;
+}
+
+.set-window form input:hover{
+    background-color: #9d50c7;
 }
 
 .app .game-content{
     width: 80%;
     max-width: 700px;
-    padding: 40px 0;
+    padding: 20px 0;
     border-radius: 20px;
-    background-color: #d1d1d1;
+    background-color: #cfc1de;
     box-shadow: 5px 5px 5px #777;
     display: flex;
     align-items: center;
@@ -131,17 +136,84 @@ html,body{
 }
 
 #reset{
-    display: none;
     margin-top: 40px;
     width: 150px;
     height: 40px;
-    border: 0;
+    border: 2px solid #7a2ea3;
     border-radius: 15px;
     outline: none;
-    background-color: #7a2ea3;
+    background-color: transparent;
     font-weight: bold;
-    color: white;
+    color: #7a2ea3;
     font-size: 17px;
     cursor: pointer;
-}   
+    transition: .3s;
+}
 
+#reset:hover{
+    background-color: #9d50c7;
+}
+
+@keyframes fadeIn{
+    from{
+        font-size: 0px;
+        color: rgba(212, 28, 98, 0);
+    }
+    to{
+        font-size: 45px;
+        color: rgba(212, 28, 98, 1);
+    }
+}
+
+
+.fade-in{
+    animation-name: fadeIn;
+    animation-duration: .5s;
+}
+
+
+@media screen and (max-width: 650px){
+    .set-window form{
+        width: 90%;
+    }
+    
+    .set-window form select{
+        width: 90%;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .app .game-content{
+        width: 95%;
+    }
+    
+    .game-display h1{
+        font-size: 22px;
+    }
+    
+    .game-display p{
+        font-size: 17px;
+    }
+    
+    .game-content .game-board{
+        width: 90%;
+        height: 300px;
+    }
+    
+    .game-board .cell{
+        font-size: 35px;
+    }
+    
+    @keyframes fadeIn{
+        from{
+            font-size: 0px;
+            color: rgba(212, 28, 98, 0);
+        }
+        to{
+            font-size: 35px;
+            color: rgba(212, 28, 98, 1);
+        }
+    }
+
+}
