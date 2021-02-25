@@ -65,7 +65,7 @@ const Controllers = (() => {
                 cells.item(randomIndex).classList.add('fade-in');
                 Game.playRound(randomIndex);
             }
-            else if(selectedType == 2){
+            else if(selectedType == 2 && !Game.getGameOver()){
                 const smartIndex = Computer.smartChoice();
                 cells.item(smartIndex).classList.add('fade-in');
                 Game.playRound(smartIndex);
